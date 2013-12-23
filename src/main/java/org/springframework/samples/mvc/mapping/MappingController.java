@@ -19,6 +19,7 @@ public class MappingController {
 
 	@RequestMapping(value="/mapping/path/*", method=RequestMethod.GET)
 	public @ResponseBody String byPathPattern(HttpServletRequest request) {
+		System.out.println("---------"+request.getRequestURI());
 		return "Mapped by path pattern ('" + request.getRequestURI() + "')";
 	}
 
